@@ -153,7 +153,7 @@ app.get('/authorize', function(req, res) {
  */
 function verifyRequestSignature(req, res, buf) {
   var signature = req.headers["x-hub-signature"];
-
+  console.log(buf);
   if (!signature) {
     // For testing, let's log an error. In production, you should throw an
     // error.
